@@ -1,0 +1,19 @@
+{
+  "name": "figma-design-system-scss-converter",
+  "version": "0.1.0",
+  "description": "피그마 디자인 시스템 & 토큰을 Sass 변수로 변환하여주는 유틸리티입니다.",
+  "main": "index.js",
+  "scripts": {
+    "build": "JSON_PATH='./designTokens.json' OUTPUT_PATH='./designTokens.scss' node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compy-ryu/figma-design-system-scss-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/compy-ryu/figma-design-system-scss-converter/issues"
+  },
+  "homepage": "https://github.com/compy-ryu/figma-design-system-scss-converter#readme"
+}
