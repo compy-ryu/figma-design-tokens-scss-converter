@@ -4,7 +4,7 @@
   "description": "피그마 디자인 시스템 & 토큰을 Sass 변수로 변환하여주는 유틸리티입니다.",
   "main": "index.js",
   "scripts": {
-    "build": "JSON_PATH='./tokens.json' OUTPUT_PATH='./designToken.scss' node index.js"
+    "build": "JSON_PATH='./designTokens.json' OUTPUT_PATH='./designTokens.scss' node index.js"
   },
   "repository": {
     "type": "git",
