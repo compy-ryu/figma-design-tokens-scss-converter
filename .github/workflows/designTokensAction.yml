@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SETTING_JSON_PATH: ./frontend/.design-tokens/designTokens.json
-      SETTING_OUTPUT_PATH: ./frontend/src/styles/designTokens.scss
+      SETTING_JSON_PATH: ./designTokens.json
+      SETTING_OUTPUT_PATH: ./designTokens.scss
       SETTING_UPDATE_BRANCHES: main
 
     strategy:
