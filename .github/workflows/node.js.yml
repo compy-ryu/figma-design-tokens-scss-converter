@@ -9,10 +9,6 @@ on:
 
 jobs:
   build:
-    permissions:
-      contents: read
-      packages: write
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,6 +24,18 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd /
     - run: npm install
     - run: npm run build
+    - name: Add & Commit
+      uses: EndBug/add-and-commit@v4.4.0
+      with:
+        add: 'designTokens.scss'
+        ref: "main"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push commit
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "main"
+        force: true
